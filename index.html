@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='author' content='Jakub Stefko'>
+    <meta name='description' content='Small project for studies to calculate PI by Monte Carlo method'>
+    <meta name='viewport' content="width=device-width, initial-scale=1">
+    <title>PI calculator</title>
+    <!-- Favicon -->
+    <link rel='icon' type='image/x-icon' href='icons/favicon.ico'>
+    <!-- CSS -->
+    <link rel='stylesheet' href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to PI calculator by Monte Carlo method</h1>
+    </header>
+    <main>
+        <section class='canvaContainer'>
+            <canvas id='canva'></canvas>
+        </section>
+        <section class='canvaProperties'>
+            <div class='propsContainer'>
+                <input type='text' placeholder='props number...' min='1' max='1000000' value='1000' id='propsNumber'>
+                <button id='startButton' onclick='start()'>Start</button>
+                <button id='stopButton' onclick='stop()'>Stop</button>
+            </div>
+            <p>&pi; ~
+                <span id='piValue'></span>
+            </p>
+        </section>
+    </main>
+    <footer>
+        Copyright &copy; Jakub Stefko 2018 -
+        <span id='year'></span>
+    </footer>
+    <script src="js/currentYear.js"></script>
+    <script src="js/monteCarlo.js"></script>
+</body>
+
+</html>
